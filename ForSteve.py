@@ -1278,7 +1278,8 @@ def build_unified_qpe_grover_circuit(
     print("Quantum Circuit Details:")
     print(qc)
     print(f"[i] Circuit depth: {qc.depth()}, Circuit size: {qc.size()}")
-
+    qc.draw()
+    qc.draw('mpl') # Draw the circuit diagram
     return qc, n_a, n_b, n_p
 
 # ----------------- Qubit and Gate Estimators -----------------
@@ -1823,3 +1824,4 @@ def advanced_main():
 # ----------------- Run Main -----------------
 if __name__ == "__main__":
     advanced_main()
+
